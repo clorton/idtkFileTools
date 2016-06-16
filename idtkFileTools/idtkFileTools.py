@@ -161,15 +161,7 @@ def set_metadata(header, payload, compressed):
     return metadata
 
 
-def _do_read():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('command', metavar='READ')
-    parser.add_argument('filename')
-    parser.add_argument('--header', default=None, help='Write header to file', metavar='<filename>')
-    parser.add_argument('-p', '--payload', default=None, help='Write exact contents of payload to file', metavar='<filename>')
-    parser.add_argument('-u', '--unformatted', default=True, dest='format', action='store_false', help="Don't format contents of file")
-    parser.add_argument('-o', '--output', default=None, help='Output filename defaults to input with .json extension')
-    args = parser.parse_args()
+def _do_read(args):
 
     header, payload, contents, data = read_idtk_file(args.filename)
 
@@ -196,17 +188,7 @@ def _do_read():
     pass
 
 
-def _do_write():
-    parser = argparse.ArgumentParser(description="Tools for reading/writing DTK serialized population files.")
-    parser.add_argument('command', metavar='WRITE')
-    parser.add_argument('input', help='Source data filename')
-    parser.add_argument('filename', help='Output .dtk filename')
-    parser.add_argument('--header', default=None, help='Metadata header information filename')
-    parser.add_argument('-a', '--author', default=os.environ['USERNAME'], help='Author name for metadata [{0}]'.format(os.environ['USERNAME']))
-    parser.add_argument('-t', '--tool', default=os.path.basename(__file__), help='Tool name for metadata [{0}]'.format(os.path.basename(__file__)))
-    parser.add_argument('-u', '--uncompressed', default=True, action='store_false', dest='compress', help='Do not compress contents of new .idtk file [False]')
-    parser.add_argument('-s', '--skip-verify', default=True, action='store_false', dest='verify', help='Do not verify contents are valid JSON [False]')
-    args = parser.parse_args()
+def _do_write(args):
 
     if args.header is not None:
         with open(args.header, 'rb') as handle:
@@ -242,19 +224,25 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="Tools for reading/writing DTK serialized population files.")
     subparsers = parser.add_subparsers(help='add_subparsers help')
-    subparsers.add_parser('read', help='read help')
+    read_parser = subparsers.add_parser('read', help='read help')
+    read_parser.add_argument('filename')
+    read_parser.add_argument('--header', default=None, help='Write header to file', metavar='<filename>')
+    read_parser.add_argument('-p', '--payload', default=None, help='Write exact contents of payload to file', metavar='<filename>')
+    read_parser.add_argument('-u', '--unformatted', default=True, dest='format', action='store_false', help="Don't format contents of file")
+    read_parser.add_argument('-o', '--output', default=None, help='Output filename defaults to input with .json extension')
+    read_parser.set_defaults(func=_do_read)
 
-    subparsers.add_parser('write', help='write help')
+    write_parser = subparsers.add_parser('write', help='write help')
+    write_parser.add_argument('input', help='Source data filename')
+    write_parser.add_argument('filename', help='Output .dtk filename')
+    write_parser.add_argument('--header', default=None, help='Metadata header information filename')
+    write_parser.add_argument('-a', '--author', default=os.environ['USERNAME'], help='Author name for metadata [{0}]'.format(os.environ['USERNAME']))
+    write_parser.add_argument('-t', '--tool', default=os.path.basename(__file__), help='Tool name for metadata [{0}]'.format(os.path.basename(__file__)))
+    write_parser.add_argument('-u', '--uncompressed', default=True, action='store_false', dest='compress', help='Do not compress contents of new .idtk file [False]')
+    write_parser.add_argument('-s', '--skip-verify', default=True, action='store_false', dest='verify', help='Do not verify contents are valid JSON [False]')
+    write_parser.set_defaults(func=_do_write)
 
-
-    if len(sys.argv) > 1:
-        if sys.argv[1].lower() == 'read':
-            _do_read()
-        elif sys.argv[1].lower() == 'write':
-            _do_write()
-        else:
-            print("Options for {0} are 'read' or 'write'".format(os.path.basename(__file__)), file=sys.stderr)
-    else:
-        print("Options for {0} are 'read' or 'write'".format(os.path.basename(__file__)), file=sys.stderr)
+    args = parser.parse_args()
+    args.func(args)
 
     pass
