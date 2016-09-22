@@ -121,12 +121,17 @@ def write_idtk_file(header, data, filename, compress=True):
 
     # indent=None means no newlines
     contents = timing(lambda: json.dumps(data, indent=None, separators=(',', ':')), message_index=CONVERT_TO_JSON)
+    is_compressed = False
     if compress:
-        payload = timing(lambda: snappy.compress(contents), message_index=COMPRESS_JSON)
+        if len(contents) < 0x80000000:  # Change this to 0x100000000 when python-snappy is fixed
+            payload = timing(lambda: snappy.compress(contents), message_index=COMPRESS_JSON)
+            is_compressed = True
+        else:
+            payload = contents
     else:
         payload = contents
 
-    set_metadata(header, payload, compress)
+    set_metadata(header, payload, is_compressed)
 
     write_idtk_file_components(header, payload, filename)
 
@@ -242,7 +247,7 @@ if __name__ == '__main__':
     write_parser.add_argument('-s', '--skip-verify', default=True, action='store_false', dest='verify', help='Do not verify contents are valid JSON [False]')
     write_parser.set_defaults(func=_do_write)
 
-    args = parser.parse_args()
-    args.func(args)
+    command_line_args = parser.parse_args()
+    command_line_args.func(command_line_args)
 
     pass
