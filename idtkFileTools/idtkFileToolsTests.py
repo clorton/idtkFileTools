@@ -12,7 +12,7 @@ import unittest
 class TestReadingComponents(unittest.TestCase):
 
     def test_reading_uncompressed_file_components(self):
-        header, payload = idtkFileTools.read_idtk_file_components('test/simple.dtk')
+        header, payload = idtkFileTools.read_idtk_file_components('test-data/simple.dtk')
         self.assertEqual('{"metadata":{"author":"clorton","tool":"notepad","compressed":false}}', header)
         self.assertEqual('{"simulation":{"__class__":"SimulationPython","serializationMask":0}}', payload)
         pass
@@ -21,7 +21,7 @@ class TestReadingComponents(unittest.TestCase):
 class TestReadingFile(unittest.TestCase):
 
     def test_reading_uncompressed_file(self):
-        header, payload, contents, data = idtkFileTools.read_idtk_file('test/simple.dtk')
+        header, payload, contents, data = idtkFileTools.read_idtk_file('test-data/simple.dtk')
         self.assertEqual({"metadata": {"author": "clorton", "tool": "notepad", "compressed": False}}, header)
         self.assertEqual('{"simulation":{"__class__":"SimulationPython","serializationMask":0}}', payload)
         self.assertEqual('{"simulation":{"__class__":"SimulationPython","serializationMask":0}}', contents)
@@ -29,7 +29,7 @@ class TestReadingFile(unittest.TestCase):
         pass
 
     def test_reading_compressed_file(self):
-        header, payload, contents, data = idtkFileTools.read_idtk_file('test/compressed.dtk')
+        header, payload, contents, data = idtkFileTools.read_idtk_file('test-data/compressed.dtk')
         self.assertEqual({"metadata": {"author": "clorton", "tool": "notepad", "compressed": True, "version": 1, "date": "Fri Mar 18 15:59:18 2016", "bytecount": 65, "sha1": "91f040868a34a597a7ba2da33eb6d794d0b99af5", "md5": "cd2c83a78544bf11159632599f7c4cf4"}}, header)
         expected = snappy.compress('{"simulation":{"__class__":"SimulationPython","serializationMask":0}}')
         self.assertEqual(expected, payload)
@@ -48,7 +48,7 @@ class TestWritingComponents(unittest.TestCase):
         idtkFileTools.write_idtk_file_components(header, payload, temp_filename)
         with open(temp_filename, 'rb') as handle:
             actual = handle.read()
-        with open('test/expected.dtk', 'rb') as handle:
+        with open('test-data/expected.dtk', 'rb') as handle:
             expected = handle.read()
         os.remove(temp_filename)
         self.assertEqual(expected, actual)
