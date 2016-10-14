@@ -2,17 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaeca376-ad89-4a4e-bd0a-2149ed009c94" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dtkFileTools.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dtkFileToolsTests.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/header-compressed-false.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/header-compressed-true.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/payload.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/compressed.dtk" afterPath="$PROJECT_DIR$/test-data/compressed.dtk" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/expected.dtk" afterPath="$PROJECT_DIR$/test-data/expected.dtk" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/simple.dtk" afterPath="$PROJECT_DIR$/test-data/simple.dtk" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/state-05475.dtk" afterPath="$PROJECT_DIR$/test-data/state-05474.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.dtk.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.node.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.node.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.sim.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.sim.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.dtk.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.dtk.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-1.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-1.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-2.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-2.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.sim.lz4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.sim.snappy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/bad-header.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/bad-magic.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/future-version.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/missing-version.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/neg-chunk-size.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/neg-hdr-size.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/neg-version.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/header-00010.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00000.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.dtk.none" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.node.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/one-node/state-00010.sim.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/truncated.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00000.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.dtk.none" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.hdr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-1.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.node-2.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/two-node/state-00010.sim.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/zero-chunk-size.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/zero-hdr-size.dtk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-data/zero-version.dtk" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/state-05475.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idtkFileToolsTests.py" afterPath="$PROJECT_DIR$/idtkFileToolsTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtkFileTools.py" afterPath="$PROJECT_DIR$/dtkFileTools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dtkFileToolsTests.py" afterPath="$PROJECT_DIR$/dtkFileToolsTests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-data/simple.dtk" afterPath="$PROJECT_DIR$/test-data/simple.dtk" />
     </list>
     <ignored path="idtkFileTools.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +67,7 @@
           <file leaf-file-name="idtkFileToolsTests.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/idtkFileToolsTests.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1122">
+                <state relative-caret-position="1496">
                   <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
                   <folding>
                     <element signature="e#19#37#0" expanded="true" />
@@ -49,8 +79,8 @@
           <file leaf-file-name="dtkFileTools.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dtkFileTools.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2040">
-                  <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+                <state relative-caret-position="238">
+                  <caret line="90" column="81" selection-start-line="90" selection-start-column="81" selection-end-line="90" selection-end-column="81" />
                   <folding>
                     <element signature="e#19#56#0" expanded="true" />
                   </folding>
@@ -65,7 +95,7 @@
           <file leaf-file-name="idtkFileTools.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/idtkFileTools.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2577">
+                <state relative-caret-position="3468">
                   <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
                   <folding>
                     <element signature="e#19#56#0" expanded="true" />
@@ -77,8 +107,8 @@
           <file leaf-file-name="dtkFileToolsTests.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dtkFileToolsTests.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2006">
-                  <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+                <state relative-caret-position="201">
+                  <caret line="250" column="17" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
                   <folding>
                     <element signature="e#19#38#0" expanded="true" />
                   </folding>
@@ -169,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,6 +219,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -201,7 +231,7 @@
       <recent name="C:\Users\clorton\Documents\Visual Studio 2015\Projects\idtkFileTools\idtkFileTools\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in dtkFileToolsTests">
+  <component name="RunManager" selected="Python tests.Unittest TestReadingSadPath.test_reading_invalid_header">
     <configuration default="false" name="idtkFileToolsTests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -234,28 +264,6 @@
       <option name="SCRIPT_NAME" value="C:\Users\clorton\Documents\Visual Studio 2015\Projects\idtkFileTools\idtkFileTools\dtkFileTools.py" />
       <option name="PARAMETERS" value="read ..\test\version2.dtk --header header.json --raw --output version2" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestWritingFile.uncompressed_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="idtkFileTools" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/idtkFileToolsTests.py" />
-      <option name="CLASS_NAME" value="TestWritingFile" />
-      <option name="METHOD_NAME" value="uncompressed_test" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Unittest TestWritingFile.compressed_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -295,6 +303,28 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestReadingSadPath.test_reading_invalid_header" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="idtkFileTools" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dtkFileToolsTests.py" />
+      <option name="CLASS_NAME" value="TestReadingSadPath" />
+      <option name="METHOD_NAME" value="test_reading_invalid_header" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -475,17 +505,17 @@
       <item index="1" class="java.lang.String" itemvalue="Python.dtkFile write" />
       <item index="2" class="java.lang.String" itemvalue="Python.idtkFileToolsTests" />
       <item index="3" class="java.lang.String" itemvalue="Python.dtkFile read" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.uncompressed_test" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.compressed_test" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in dtkFileToolsTests" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.compressed_test" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in dtkFileToolsTests" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittest TestReadingSadPath.test_reading_invalid_header" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in dtkFileToolsTests" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dtkFile read" />
-        <item index="2" class="java.lang.String" itemvalue="Python.idtkFileToolsTests" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.compressed_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.uncompressed_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestReadingSadPath.test_reading_invalid_header" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in dtkFileToolsTests" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dtkFile read" />
+        <item index="3" class="java.lang.String" itemvalue="Python.idtkFileToolsTests" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestWritingFile.compressed_test" />
       </list>
     </recent_temporary>
   </component>
@@ -506,51 +536,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TestWritingFile_compressed_test - 2016.03.18 at 16h 52m 05s.xml">
-      <configuration name="Unittest TestWritingFile.compressed_test" configurationId="tests" />
+    <history-entry file="Unittest_TestReadingSadPath_test_reading_invalid_header - 2016.10.14 at 00h 15m 07s.xml">
+      <configuration name="Unittest TestReadingSadPath.test_reading_invalid_header" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestWritingFile_compressed_test - 2016.03.18 at 16h 52m 28s.xml">
-      <configuration name="Unittest TestWritingFile.compressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_TestWritingFile_compressed_test - 2016.03.18 at 16h 52m 54s.xml">
-      <configuration name="Unittest TestWritingFile.compressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_TestWritingFile_compressed_test - 2016.03.18 at 16h 53m 31s.xml">
-      <configuration name="Unittest TestWritingFile.compressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_TestWritingFile_uncompressed_test - 2016.03.18 at 16h 39m 24s.xml">
-      <configuration name="Unittest TestWritingFile.uncompressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_TestWritingFile_uncompressed_test - 2016.03.18 at 16h 39m 36s.xml">
-      <configuration name="Unittest TestWritingFile.uncompressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_TestWritingFile_uncompressed_test - 2016.03.18 at 16h 50m 02s.xml">
-      <configuration name="Unittest TestWritingFile.uncompressed_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.09.27 at 12h 35m 59s.xml">
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.13 at 21h 11m 21s.xml">
       <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.09.27 at 12h 37m 05s.xml">
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.13 at 21h 27m 25s.xml">
       <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.09.27 at 12h 37m 46s.xml">
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.13 at 23h 35m 27s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.13 at 23h 43m 28s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.13 at 23h 56m 03s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.14 at 00h 08m 25s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.14 at 00h 11m 59s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.14 at 00h 13m 21s.xml">
+      <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dtkFileToolsTests - 2016.10.14 at 00h 14m 36s.xml">
       <configuration name="Unittests in dtkFileToolsTests" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1410" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48923078" sideWeight="0.18398437" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.369863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48923078" sideWeight="0.8160156" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2876923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2876923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -573,13 +603,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dtkFileTools.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -587,7 +610,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -601,6 +624,86 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/idtkFileToolsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtkFileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idtkFileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3468">
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtkFileToolsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idtkFileToolsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtkFileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/idtkFileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3468">
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtkFileToolsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/idtkFileToolsTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
@@ -818,13 +921,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/header-compressed-true.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="66" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/header-compressed-true.json" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -839,51 +936,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/header-compressed-false.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/payload.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="69" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/simple.dtk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="154" selection-start-line="0" selection-start-column="154" selection-end-line="0" selection-end-column="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/compressed.dtk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="236" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/expected.dtk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/version1.dtk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/header-compressed-false.json" />
+    <entry file="file://$PROJECT_DIR$/test/payload.json" />
+    <entry file="file://$PROJECT_DIR$/test/simple.dtk" />
+    <entry file="file://$PROJECT_DIR$/test/compressed.dtk" />
+    <entry file="file://$PROJECT_DIR$/test/expected.dtk" />
+    <entry file="file://$PROJECT_DIR$/test/version1.dtk" />
     <entry file="file://$PROJECT_DIR$/idtkFileToolsTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
+        <state relative-caret-position="1496">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="e#19#37#0" expanded="true" />
@@ -891,20 +952,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dtkFileTools.py">
+    <entry file="file://$PROJECT_DIR$/idtkFileTools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="3468">
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
           <folding>
             <element signature="e#19#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idtkFileTools.py">
+    <entry file="file://C:/Python27/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2577">
-          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+        <state relative-caret-position="299">
+          <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtkFileTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="90" column="81" selection-start-line="90" selection-start-column="81" selection-end-line="90" selection-end-column="81" />
           <folding>
             <element signature="e#19#56#0" expanded="true" />
           </folding>
@@ -913,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dtkFileToolsTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state relative-caret-position="201">
+          <caret line="250" column="17" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>

@@ -1,0 +1,14 @@
+{
+  "metadata":{
+    "engine":"LZ4",
+    "bytecount":92811,
+    "version":2,
+    "compressed":true,
+    "date":"Fri Oct 14 00:45:50 2016",
+    "chunksizes":[
+      360,
+      92451
+    ],
+    "chunkcount":2
+  }
+}

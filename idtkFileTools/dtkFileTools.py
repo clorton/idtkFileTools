@@ -85,7 +85,10 @@ class DtkFile:
     def get_contents(self, index):
         contents = self.get_chunk(index)
         if self.engine:
-            contents = self.engine.decompress(contents)
+            try:
+                contents = self.engine.decompress(contents)
+            except ValueError as err:
+                raise UserWarning("Couldn't decompress chunk - '{0}'".format(err))
 
         return contents
 
@@ -113,17 +116,55 @@ def _check_magic(handle):
 def _read_header(handle):
     size_string = handle.read(12)
     header_size = int(size_string)
+    _check_header_size(header_size)
     header_text = handle.read(header_size)
-    header = json.loads(header_text, object_hook=SerialObject)
+    header = _try_parse_header_text(header_text)
+
     metadata = header.metadata
+
     if not 'version' in metadata:
         metadata.version = 1
     if metadata.version < 2:
         metadata.engine = 'SNAPPY' if metadata.compressed else 'NONE'
         metadata.chunkcount = 1
         metadata.chunksizes = [metadata.bytecount]
+    _check_version(metadata.version)
+
+    _check_chunk_sizes(metadata.chunksizes)
 
     return header_text, header
+
+
+def _check_header_size(header_size):
+    if header_size <= 0:
+        raise UserWarning("Invalid header size: {0}".format(header_size))
+
+    return
+
+
+def _try_parse_header_text(header_text):
+    try:
+        header = json.loads(header_text, object_hook=SerialObject)
+    except ValueError as err:
+        raise UserWarning("Couldn't decode JSON header '{0}'".format(err))
+
+    return header
+
+
+def _check_version(version):
+    if version <= 0 or version > 2:
+        raise UserWarning("Unknown version: {0}".format(version))
+
+    return
+
+
+def _check_chunk_sizes(chunk_sizes):
+
+    for size in chunk_sizes:
+        if size <= 0:
+            raise UserWarning("Invalid chunk size: {0}".format(size))
+
+    return
 
 
 def __do_read__(commandline_arguments):
